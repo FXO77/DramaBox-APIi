@@ -16,7 +16,7 @@ export const getToken = async () => {
     }
 
     // 2. kalau tidak ada atau expired → request baru
-    const res = await axios.get("https://dramabox-api.vercel.app/api/token");
+    const res = await axios.get("https://dramabox-token.vercel.app/token");
 
     if (!res.data.data || !res.data.data.token || !res.data.data.deviceId) {
       throw new Error("Token atau Device ID tidak ditemukan dari API");
